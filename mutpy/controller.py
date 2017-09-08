@@ -244,7 +244,7 @@ class MutationController(views.ViewNotifier):
     # mutations - list of operators.Mutation type. It is ast node that was mutated by operator.
 	# coverage_result - coverage.CoverageTestResult. Result of testing the code after covering it. 
 	# suite - unittest.suite.TestSuite. Test suite for this mutant.
-	def mark_not_covered_tests_as_skip(self, mutations, coverage_result, suite):
+    def mark_not_covered_tests_as_skip(self, mutations, coverage_result, suite):
         mutated_nodes = {mutation.node.marker for mutation in mutations}
 
         def iter_tests(tests):
