@@ -281,7 +281,7 @@ class MutationController(views.ViewNotifier):
 	# total_duration - sum of durations of all module tests
     # returned value:
 	# 1 result - result of the test suite
-	def run_mutation_test_runner(self, suite, total_duration):
+    def run_mutation_test_runner(self, suite, total_duration):
         live_time = self.timeout_factor * (total_duration if total_duration > 1 else 1)
         test_runner_class = utils.get_mutation_test_runner_class()
         test_runner = test_runner_class(suite=suite)
